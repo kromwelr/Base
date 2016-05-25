@@ -19,9 +19,9 @@ public class TaskManagerServiceImpl implements TaskManagerService {
 	private TaskManagerDao taskManagerDao;
 
 	@Override
-	public void addTask(Task task) {
+	public Task addTask(Task task) {
 
-		taskManagerDao.addTask(task);
+		return taskManagerDao.addTask(task);
 	}
 
 	@Override

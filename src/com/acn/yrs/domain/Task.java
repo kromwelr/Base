@@ -1,5 +1,6 @@
 package com.acn.yrs.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -9,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "TASK_LIST")
-public class Task {
+public class Task extends BaseDomain{
 
 	@Id
 	@Column(name = "task_id", nullable = false)

@@ -2,15 +2,38 @@ package com.acn.yrs.domain;
 
 import java.util.Date;
 
-public class UserInfo {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "USERINFO")
+public class UserInfo extends BaseDomain{
+
+	@Id
+	@Column(name = "userid", nullable = false)
 	private String userId;
+
+	@Column(name = "nm", nullable = false)
 	private String nm;
+
+	@Column(name = "usergroup", nullable = false)
 	private int userGroup;
+
+	@Column(name = "password")
 	private String password;
+
+	@Column(name = "sessionid")
 	private String sessionId;
+
+	@Column(name = "email")
 	private String email;
+
+	@Column(name = "updt")
 	private Date upDt;
+
+	@Column(name = "birthday")
 	private Date birthday;
 
 	/**
@@ -131,5 +154,11 @@ public class UserInfo {
 	 */
 	public void setBirthday(Date birthday) {
 		this.birthday = birthday;
+	}
+	@Override
+	public String toString() {
+		return "UserInfo [userId=" + userId + ", name=" + nm
+				+ ", userGroup=" + userGroup + ", email="
+				+ email + ",birthday=" + birthday + "]";
 	}
 }

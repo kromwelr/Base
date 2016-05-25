@@ -7,7 +7,7 @@ import com.acn.yrs.domain.Task;
 
 public interface TaskManagerService {
 
-	public void addTask(Task task);
+	public Task addTask(Task task);
 
 	public void archiveTask(int taskId) throws ParseException;
 
